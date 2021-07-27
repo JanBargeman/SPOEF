@@ -13,3 +13,29 @@ nav:
     - Minimal working example: tutorials/minimal_working_example.py
 
 copyright: CopyRight &copy; 2021
+
+theme:
+  name: material
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  features:
+    - navigation.tabs
+  palette:
+    scheme: default
+    primary: teal
+    accent: yellow
+
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      use_pygments: true
+  - toc:
+      permalink: true
