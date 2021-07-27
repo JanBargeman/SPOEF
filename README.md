@@ -15,7 +15,7 @@ transaction_features_quarterly = feature_generation(
     grouper="name",
     combine_fill_method="transaction",
     time_window='quarter',
-    list_featuretypes=list_featuretypes,
+    list_featuretypes=["FourierComplete", "WaveletComplete"],
     observation_length=1
 )
 ```
