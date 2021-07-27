@@ -30,4 +30,8 @@ pip install SPOEF
 
 ## Documentation
 
+<<<<<<< HEAD
 The documentation can [be found here.](https://janbargeman.github.io/SPOEF/)
+=======
+The documentation can [be found here.](https://janbargeman.github.io/SPOEF/)
+>>>>>>> 2eb3738e78d1364d9f5ae7950591b47acdabed40
