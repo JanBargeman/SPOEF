@@ -1,0 +1,15 @@
+site_name: SPOEF - documentation
+
+repo_url: https://github.com/JanBargeman/SPOEF
+site_url: https://janbargeman.github.io/SPOEF/
+site_description: Getting started with Signal Processing features for transaction data
+site_author: Jan Bargeman
+
+nav:
+  - Home: index.md
+  - Getting started:
+    - getting_started/install.md
+  - How to:
+    - Minimal working example: tutorials/minimal_working_example.py
+
+copyright: CopyRight &copy; 2021
