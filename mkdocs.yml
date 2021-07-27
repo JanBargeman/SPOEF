@@ -12,6 +12,25 @@ nav:
   - How to:
     - Minimal working example: tutorials/minimal_working_example.py
 
+plugins:
+  - mkdocstrings:
+      handlers:
+          python:
+            selection:
+              inherited_members: true
+              filters:
+                - "!^Base"
+                - "!^_"  # exlude all members starting with _
+                - "^__init__$"  # but always include __init__ modules and methods
+            rendering:
+              show_root_toc_entry: false
+      watch:
+        - SPOEF
+  - search
+  - mknotebooks:
+      enable_default_jupyter_cell_styling: true
+      enable_default_pandas_dataframe_styling: true
+
 copyright: CopyRight &copy; 2021
 
 theme:
