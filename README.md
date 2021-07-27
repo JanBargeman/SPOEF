@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+[![PyPi Version](https://img.shields.io/pypi/pyversions/SPOEF)](#)
+[![PyPI](https://img.shields.io/pypi/v/SPOEF)](#)
 
-You can use the [editor on GitHub](https://github.com/JanBargeman/SPOEF/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+# SPOEF
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Overview
 
-### Markdown
+**SPOEF** is a Python package that lets you easily generate features with signal processing methods from transaction data.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Example Usage - Generating Features
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```python
+transaction_features_quarterly = feature_generation(
+    data=data[["name", "date", "transaction"]],
+    grouper="name",
+    combine_fill_method="transaction",
+    time_window='quarter',
+    list_featuretypes=["FourierComplete", "WaveletComplete"],
+    observation_length=1
+)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- [Minimal Working Example](https://janbargeman.github.io/spoef/tutorials/minimal_working_example.html)
 
-### Jekyll Themes
+## Installation
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JanBargeman/SPOEF/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```bash
+pip install SPOEF
+```
 
-### Support or Contact
+## Documentation
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The documentation can [be found here.](https://janbargeman.github.io/SPOEF/)
