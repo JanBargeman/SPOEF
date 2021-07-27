@@ -5,6 +5,8 @@ site_url: https://janbargeman.github.io/SPOEF/
 site_description: Getting started with Signal Processing features for transaction data
 site_author: Jan Bargeman
 
+use_directory_urls: false
+
 nav:
   - Home: index.md
   - Getting started:
@@ -12,4 +14,49 @@ nav:
   - How to:
     - Minimal working example: tutorials/minimal_working_example.py
 
+plugins:
+  - mkdocstrings:
+      handlers:
+          python:
+            selection:
+              inherited_members: true
+              filters:
+                - "!^Base"
+                - "!^_"  # exlude all members starting with _
+                - "^__init__$"  # but always include __init__ modules and methods
+            rendering:
+              show_root_toc_entry: false
+      watch:
+        - SPOEF
+  - search
+  - mknotebooks:
+      enable_default_jupyter_cell_styling: true
+      enable_default_pandas_dataframe_styling: true
+
 copyright: CopyRight &copy; 2021
+
+theme:
+  name: material
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  features:
+    - navigation.tabs
+  palette:
+    scheme: default
+    primary: blue
+    accent: yellow
+
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      use_pygments: true
+  - toc:
+      permalink: true
