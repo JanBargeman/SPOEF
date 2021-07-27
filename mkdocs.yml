@@ -36,7 +36,7 @@ plugins:
 copyright: CopyRight &copy; 2021
 
 theme:
-  name: material
+  name: mkdocs
   font:
     text: Ubuntu
     code: Ubuntu Mono
