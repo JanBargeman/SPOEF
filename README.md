@@ -1,7 +1,6 @@
-[![PyPi Version](https://img.shields.io/pypi/pyversions/bokbokbok)](#)
-[![PyPI](https://img.shields.io/pypi/v/bokbokbok)](#)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/bokbokbok)](#)
-![GitHub contributors](https://img.shields.io/github/contributors/orchardbirds/bokbokbok)
+[![PyPi Version](https://img.shields.io/pypi/pyversions/SPOEF)](#)
+[![PyPI](https://img.shields.io/pypi/v/SPOEF)](#)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/SPOEF)](#)
 
 
 # SPOEF
