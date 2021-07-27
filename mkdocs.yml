@@ -5,6 +5,8 @@ site_url: https://janbargeman.github.io/SPOEF/
 site_description: Getting started with Signal Processing features for transaction data
 site_author: Jan Bargeman
 
+use_directory_urls: false
+
 nav:
   - Home: index.md
   - Getting started:
