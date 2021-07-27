@@ -1,7 +1,5 @@
 [![PyPi Version](https://img.shields.io/pypi/pyversions/SPOEF)](#)
 [![PyPI](https://img.shields.io/pypi/v/SPOEF)](#)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/SPOEF)](#)
-
 
 # SPOEF
 
