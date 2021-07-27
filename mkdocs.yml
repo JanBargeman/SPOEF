@@ -42,7 +42,7 @@ theme:
     - navigation.tabs
   palette:
     scheme: default
-    primary: teal
+    primary: blue
     accent: yellow
 
 
