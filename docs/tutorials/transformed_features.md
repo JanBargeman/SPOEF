@@ -1,4 +1,4 @@
-'''python
+```python
 import pandas as pd
 from spoef.feature_generation import feature_generation
 from spoef.transforms import feature_generation_transformed
@@ -61,4 +61,4 @@ ICA_features_quarterly = feature_generation_transformed(
     list_featuretypes=list_featuretypes,
     observation_length=1
 )
-'''
+```
