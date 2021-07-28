@@ -37,7 +37,7 @@ normalized_transaction_features_quarterly = feature_generation(
 
 # Generating PCA features over 1 quarter.
 
-# For the transactions:
+# For the transformed transactions and balances:
 PCA_features_quarterly = feature_generation_transformed(
     data=data[["name", "date", "transaction", "balance"]],
     grouper="name",
@@ -50,7 +50,7 @@ PCA_features_quarterly = feature_generation_transformed(
 
 # Generating ICA features over 1 quarter.
 
-# For the transactions:
+# For the transformed transactions and balances:
 ICA_features_quarterly = feature_generation_transformed(
     data=data[["name", "date", "transaction", "balance"]],
     grouper="name",

@@ -1,4 +1,4 @@
-## First, we generate a set of features:
+### Generating a set of features
 
 ```python
 import pandas as pd
@@ -38,11 +38,12 @@ transaction_features_quarterly = feature_generation(
 ```
 
 
-## Then, we would like to get an insight into what features were generated
+### Then, the summary
 
 ```python
 overview = count_occurences_features(transaction_features_quarterly, print_head=5)
 
 ```
 
-## This returns a dataframe with counts for each type of datatype, time window, feature type and several other details. 
+This returns a dataframe with counts for each type of datatype, time window, feature type and several other details. This gives us an insight into what features were generated.
+

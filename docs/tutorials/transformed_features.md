@@ -23,7 +23,7 @@ data.date = pd.to_datetime(data.date, format="%Y-%m-%d")
 list_featuretypes = ["Basic", "FourierComplete", "FourierNLargest", "WaveletComplete", "WaveletBasic"]
 
 
-#%% Generating normalized features over 1 quarter.
+# Generating normalized features over 1 quarter.
 
 # For the transactions:
 normalized_transaction_features_quarterly = feature_generation(
@@ -36,9 +36,9 @@ normalized_transaction_features_quarterly = feature_generation(
     normalize=True
 )
 
-#%% Generating PCA features over 1 quarter.
+# Generating PCA features over 1 quarter.
 
-# For the transactions:
+# For the transformed transactions and balances:
 PCA_features_quarterly = feature_generation_transformed(
     data=data[["name", "date", "transaction", "balance"]],
     grouper="name",
@@ -49,9 +49,9 @@ PCA_features_quarterly = feature_generation_transformed(
     observation_length=1
 )
 
-#%% Generating ICA features over 1 quarter.
+# Generating ICA features over 1 quarter.
 
-# For the transactions:
+# For the transformed transactions and balances:
 ICA_features_quarterly = feature_generation_transformed(
     data=data[["name", "date", "transaction", "balance"]],
     grouper="name",
