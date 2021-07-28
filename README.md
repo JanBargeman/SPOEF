@@ -28,7 +28,7 @@ transaction_features_quarterly = feature_generation(
 pip install SPOEF
 ```
 
-## Documentation
+##  Documentation
 
 The documentation can [be found here.](https://janbargeman.github.io/SPOEF/)
 
