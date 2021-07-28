@@ -1,6 +1,6 @@
 ## First, we generate a set of features:
 
-'''python
+```python
 import pandas as pd
 from spoef.feature_generation import feature_generation
 from spoef.utils import count_occurences_features
@@ -35,14 +35,14 @@ transaction_features_quarterly = feature_generation(
     list_featuretypes=list_featuretypes,
     observation_length=1
 )
-'''
+```
 
 
 ## Then, we would like to get an insight into what features were generated
 
-'''python
+```python
 overview = count_occurences_features(transaction_features_quarterly, print_head=5)
 
-'''
+```
 
 ## This returns a dataframe with counts for each type of datatype, time window, feature type and several other details. 
