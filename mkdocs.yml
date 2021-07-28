@@ -10,9 +10,14 @@ use_directory_urls: false
 nav:
   - Home: index.md
   - Getting started:
-    - getting_started/install.md
-  - How to:
-    - Minimal working example: tutorials/minimal_working_example.py
+    - Installation: getting_started/install.md
+    - Minimal working example: tutorials/minimal_working_example.md
+  - Tutorials:
+    - Minimal working example: tutorials/minimal_working_example.md
+    - Regular features: tutorials/regular_features.md
+    - Transformed features: tutorials/transformed_features.md
+    - Features summary: tutorials/features_summary.md
+
 
 plugins:
   - mkdocstrings:

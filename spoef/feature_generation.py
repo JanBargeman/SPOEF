@@ -272,7 +272,7 @@ def feature_generation(
     mother_wavelet="db2",
 ):
     """
-    This function splits the data per identifier and performs the monthly feature
+    This function splits the data per identifier and performs the feature
     generation.
 
     list_featuretypes:
@@ -285,7 +285,7 @@ def feature_generation(
     Args:
         data (pd.DataFrame()) : data from one identifier for which to make features.
         combine_fill_method (str) : 'balance' or 'transaction'.
-        observation_length (int) : amount of recent months you want for the analysis.
+        observation_length (int) : number of recent time windows you want for the analysis.
         normalize (bool) : normalize data in time window
         list_featuretypes (list) : list of feature types to be computed.
         fourier_n_largest_frequencies (int) : amount of fourier features.
@@ -294,7 +294,7 @@ def feature_generation(
         mother_wavelet (str) : type of wavelet used for the analysis.
             possible values: "db2", "db4", "haar", see pywt.wavelist(kind="discrete")
     Returns:
-        features (pd.DataFrame()) : df with row of monthly features for each identifier.
+        features (pd.DataFrame()) : df with row of features for each identifier.
 
     """
     if time_window == 'quarter':
@@ -351,7 +351,7 @@ def compute_features_quarterly(
 ):
     """
     This function computes different types of features for one identifier.
-    It does this monthly for a specified number of quarters. The feature generation
+    It does this quarterly for a specified number of quarters. The feature generation
     can be tweaked through several variables.
 
     list_featuretypes:
@@ -364,7 +364,7 @@ def compute_features_quarterly(
     Args:
         data (pd.DataFrame()) : data from one identifier for which to make features.
         combine_fill_method (str) : 'balance' or 'transaction'.
-        observation_length (int) : amount of recent months you want for the analysis.
+        observation_length (int) : number of recent time windows you want for the analysis.
         list_featuretypes (list) : list of feature types to be computed.
         fourier_n_largest_frequencies (int) : amount of fourier features.
         wavelet_depth (int) : level of depth up to which the wavelet is computed.
@@ -385,7 +385,7 @@ def compute_features_quarterly(
 
     start_date = prepared_data.iloc[0, 0]
 
-    # create features per month
+    # create features per quarter
     features = pd.DataFrame()
     for quarter in range(0, observation_length):
         data_quarter = prepared_data[
@@ -444,7 +444,7 @@ def compute_features_yearly(
         data (pd.DataFrame()) : data from one identifier for which to make features.
         combine_fill_method (str) : 'balance' or 'transaction'.
         list_featuretypes (list) : list of feature types to be computed.
-        observation_length (int) : amount of recent months you want for the analysis.
+        observation_length (int) : number of recent time windows you want for the analysis.
         fourier_n_largest_frequencies (int) : amount of fourier features.
         wavelet_depth (int) : level of depth up to which the wavelet is computed.
             possible values: 6 is the max, depends on len(used_data)

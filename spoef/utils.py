@@ -3,10 +3,11 @@ from dateutil.relativedelta import relativedelta
 
 
 def count_occurences_features(pd_feat_names, print_head=None):
-    if isinstance(pd_feat_names, pd.DataFrame()):
+    if isinstance(pd_feat_names, pd.DataFrame):
         pd_feat_names = pd_feat_names.columns
     pd_split = pd.Series(pd_feat_names).str.split(" ", expand=True)    
-    col_names = ['transformation', 'transaction/balance/transform', 'time_window', 'feature_type', 'detail 1', 'detail 2']    
+    col_names = ['transaction/balance/transform', 'time_window', 'feature_type', 'detail 1', 'detail 2', 'detail 3']    
+    # col_names = ['transformation', 'transaction/balance/transform', 'time_window', 'feature_type', 'detail 1', 'detail 2', 'detail 3']    
     dataframe = pd.DataFrame()
     
     for i in range(len(pd_split.columns)):
