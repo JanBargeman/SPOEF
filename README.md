@@ -20,7 +20,7 @@ transaction_features_quarterly = feature_generation(
 )
 ```
 
-- [Minimal Working Example](https://janbargeman.github.io/spoef/tutorials/minimal_working_example.html)
+- [Minimal Working Example](https://janbargeman.github.io/SPOEF/tutorials/minimal_working_example.html)
 
 ## Installation
 
